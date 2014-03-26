@@ -38,7 +38,7 @@ int main(int argc, char** argv) {
     string FILENAME_para;
     FILENAME_para=string(filename);
     ifstream para_ifstream(FILENAME_para.c_str());
-    if(para_ifstream==NULL) {
+    if(!para_ifstream) {
         cout<<" Error: Can not open file: "<<FILENAME_para<<endl;
         exit(-1);
     }
@@ -76,7 +76,7 @@ int main(int argc, char** argv) {
 
     FILENAME_para=string(outputfn);
     ofstream para_ofstream(FILENAME_para.c_str());
-    if(para_ofstream==NULL) {
+    if(!para_ofstream) {
         cout<<" Error: Can not open file: "<<FILENAME_para<<endl;
         exit(-1);
     }
